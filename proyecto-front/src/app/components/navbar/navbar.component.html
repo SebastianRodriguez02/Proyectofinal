@@ -1,0 +1,150 @@
+<nav class="navbar navbar-expand-lg sticky-top ">
+  <div class="container">
+      <a class="navbar-brand" routerLink="/"> <img src="assets/img/LOGO.png" class="Img" alt=""> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link text-white" id="optNavContacto" aria-current="page"
+                      href="#contactenos">Cont&aacute;ctanos <i class="fa-solid fa-phone-volume"></i></a>
+              </li>
+          </ul>
+          <div class="input-group mb-3 w-auto pt-3">
+              <input type="text" class="form-control" placeholder="¿Qu&eacute; necesitas hoy?">
+              <span class="input-group-text bg-light" id="basic-addon2"><i
+                      class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+          <ul class="navbar-nav mb-2 mb-lg-0 d-flex">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Mi cuenta
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><button class="btn btn-light bg-light w-100" type="button" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Iniciar
+                              Sesion</button>
+
+                      </li>
+                      <li>
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-light bg-light w-100" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal">
+                              Registrate
+                          </button>
+
+                          <!-- Modal -->
+                      </li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white " href="#">Carrito <i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
+          </ul>
+
+      </div>
+  </div>
+</nav>
+<section>
+  <!--Iniciar sesion-->
+  <div class="offcanvas offcanvas-end InisioSesion  " tabindex="-1" id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header  justify-content-start align-items-start">
+
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <div class=" text-center">
+              <div>
+                  <img src="assets/img/IniciarSesion.png" class="w-25" alt="">
+                  <h6>Iniciar sesión</h6>
+              </div>
+          </div>
+
+          <div class="pt-5">
+              <form class="">
+                  <div class="ms-5 ps-3 w-75">
+                      <div class="mb-3  w-100">
+                          <label for="exampleFormCon5trolInput1" class="form-label">Tu usuario</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1"
+                              placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3  w-100">
+                          <label for="exampleFormControlInput2" class="form-label">Tu contraseña</label>
+                          <input type="password" class="form-control" id="exampleFormControlInput2"
+                              placeholder="contraseña">
+                      </div>
+
+                  </div>
+                  <div class="text-center">
+                      <button type="button" class="btn colorinicio text-white  px-4 ms-4"
+                          data-bs-dismiss="offcanvas" aria-label="Close">Entrar</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+  <!--Registro-->
+  <div class=" ">
+      <div class="modal fade cajaregistro" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-5">
+                      <div class="text-center">
+                          <form class="">
+                              <h1 class="Colortext">Registrate</h1>
+                              <p class="Colortext">para acceder a los productos de nuestra tienda</p>
+                              <input type="text" class="form-control mb-3" name="" id="" placeholder="Tu nombre">
+                              <input type="text" class="form-control mb-3" name="" id=""
+                                  placeholder="Tu apellido">
+                              <div class="d-flex">
+                                  <input type="email" name="" id="" class="form-control w-50 mb-3 me-1"
+                                      placeholder="Tu correo eletronico">
+                                  <input type="tel" name="" id="" class="form-control w-50 mb-3"
+                                      placeholder="Tu numero de celular">
+                              </div>
+                              <div class="d-flex">
+                                  <input type="text" name="" id="" class="form-control w-50 mb-3"
+                                      placeholder="Nombre de tu mascota">
+                                  <div class="form-check ms-4">
+                                      <label class="form-check-label" for="flexRadioDefault1">
+                                          Perro
+                                      </label>
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                          id="flexRadioDefault1">
+
+                                  </div>
+                                  <div class="form-check ms-4">
+                                      <label class="form-check-label" for="flexRadioDefault2">
+                                          Gato
+                                      </label>
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                          id="flexRadioDefault2" checked>
+
+                                  </div>
+                              </div>
+                              <input type="password" name="" id="" class="form-control mb-3"
+                                  placeholder="Crea tu contraseña">
+                              <input type="password" name="" id="" class="form-control mb-3"
+                                  placeholder="Confirma tu contraseña">
+                          </form>
+                      </div>
+                  </div>
+                  <div class="modal-footer justify-content-center align-items-center">
+                      <button type="button" class="btn coloregistro w-75 text-white fw-bold">Registrame</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+

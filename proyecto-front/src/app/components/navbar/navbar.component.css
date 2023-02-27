@@ -1,0 +1,24 @@
+.InisioSesion{
+  border-radius: 10px;
+}
+
+.colorinicio{
+  background-color: #1B3B6F;
+}
+.colorinicio:hover{
+  background-color: #FFDB1C;
+  color: #1B3B6F !important;
+}
+
+.cajaregistro{
+ padding:80px ;
+}
+.coloregistro{
+  background-color: #1B3B6F ;
+}
+
+.coloregistro:hover{
+  background-color: #FFDB1C ;
+  color: #1B3B6F !important;
+}
+
