@@ -5,7 +5,9 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { PerrosComponent } from './components/perros/perros.component';
 
 const routes: Routes = [
-  {path: '', component:InicioComponent}
+  {path: '', component:InicioComponent},
+  {path: 'perros', component:PerrosComponent},
+  {path: 'gatos', component:GatosComponent}
 
 ];
 
