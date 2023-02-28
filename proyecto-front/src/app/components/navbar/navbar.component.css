@@ -1,6 +1,10 @@
 .InisioSesion{
   border-radius: 10px;
 }
+.btn:hover {
+  background-color: #FFDB1C;
+  color: #1B3B6F !important;
+}
 
 .colorinicio{
   background-color: #1B3B6F;

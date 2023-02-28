@@ -19,6 +19,16 @@
 }
 
 
+.opcionNav{
+    transition: all 200ms;
+}
+.opcionNav:hover{
+    background-color: #FFDB1C;
+    border-radius: 15px;
+}
+
+
+
 
 
 
