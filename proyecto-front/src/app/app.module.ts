@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,8 +10,6 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PerrosComponent } from './components/perros/perros.component';
 import { GatosComponent } from './components/gatos/gatos.component';
-import { ReactiveFormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
@@ -18,12 +18,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     InicioComponent,
     FooterComponent,
     PerrosComponent,
-    GatosComponent
+    GatosComponent,
+    AdmiComponent,
+    AdmiUsersComponent,
+    GestionProductosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

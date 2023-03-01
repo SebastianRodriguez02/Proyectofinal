@@ -1,0 +1,61 @@
+<section class="container">
+  <div class="row">
+    <div class="col-12 text-center pt-5  ">
+      <div class="Pets">
+        <h3 class="fw-bold"> {{tituloComponente}} producto</h3>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container mb-5">
+  <h1 class="my-5 text-center"></h1>
+  <p routerLink="/admin/lista-productos" class="texto  pb-2">Regresar al listado de productos</p>
+  <form [formGroup]="productoForm" (ngSubmit)="enviarInformacion()">
+    <div class="form-floating mb-3 ">
+      <input type="text" class="form-control" id="nombre" formControlName="nombreProducto">
+      <label for="nombreProducto">Nombre</label>
+      <span
+        *ngIf="productoForm.get('nombreProducto')?.hasError('required') && productoForm.get('nombreProducto')?.touched"
+        class="text-danger fw-bold">Digite su nombre</span>
+
+
+    </div>
+    <div class="form-floating mb-3 ">
+      <input type="text" class="form-control" id="precio" formControlName="precio">
+      <label for="precio">Precio</label>
+      <span *ngIf="productoForm.get('precio')?.hasError('required') && productoForm.get('precio')?.touched"
+        class="text-danger fw-bold">Digite el precio</span>
+      <span *ngIf="productoForm.get('precio')?.hasError('pattern') && productoForm.get('precio')?.touched"
+        class="text-danger fw-bold">&nbsp;El precio no puede contener letras</span>
+
+    </div>
+
+    <div class="form-floating mb-3 ">
+
+      <div class="form-floating mb-3 ">
+        <input type="text" class="form-control" id="categoria" formControlName="categoria">
+        <label for="categoria">Categoria </label>
+        <span *ngIf="productoForm.get('categoria')?.hasError('required') && productoForm.get('categoria')?.touched"
+          class="text-danger fw-bold">Seleccione una categoria</span>
+      </div>
+
+
+
+    </div>
+
+    <div class="form-floating mb-3 ">
+      <input type="text" class="form-control" id="rutaImg" formControlName="url">
+      <label for="url">Ruta de imagen</label>
+      <span *ngIf="productoForm.get('url')?.hasError('required') && productoForm.get('url')?.touched"
+        class="text-danger fw-bold">Digite la ruta de la imagen del producto</span>
+
+
+    </div>
+    <div class="d-flex justify-content-center align-items-center my-4">
+      <button [disabled]="productoForm.invalid" type="submit" class="btn botonadministrador">Enviar</button>
+    </div>
+  </form>
+</section>
