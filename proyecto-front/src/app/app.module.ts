@@ -10,6 +10,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PerrosComponent } from './components/perros/perros.component';
 import { GatosComponent } from './components/gatos/gatos.component';
+import { AdmiUsersComponent} from './components/admi/admi-users/admi-users.component';
+import { GestionProductosComponent } from './components/admi/gestion-productos/gestion-productos.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,13 @@ import { GatosComponent } from './components/gatos/gatos.component';
     FooterComponent,
     PerrosComponent,
     GatosComponent,
-    AdmiComponent,
     AdmiUsersComponent,
     GestionProductosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
