@@ -79,12 +79,12 @@
                       <div class="mb-3  w-100">
                           <label for="exampleFormCon5trolInput1" class="form-label">Tu usuario</label>
                           <input type="text" formControlName="usuario" class="form-control" placeholder="name@example.com">
-                          <span *ngIf="navForm.get('usuario')?.hasError('required') && navForm.get('usuario')?.touched" class="text-bg-danger ps-1 fw-bold" >El correo es obligatorio</span>
+                          <span *ngIf="navForm.get('usuario')?.hasError('required') && navForm.get('usuario')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu correo es necesario</span>
                       </div>
                       <div class="mb-3  w-100">
                           <label for="exampleFormControlInput2" class="form-label">Tu contraseña</label>
                           <input type="text" formControlName="contraseña"  class="form-control" placeholder="contraseña">
-                          <span *ngIf="navForm.get('contraseña')?.hasError('required') && navForm.get('contraseña')?.touched" class="text-bg-danger ps-1 fw-bold" >La contraseña es obligatoria</span>
+                          <span *ngIf="navForm.get('contraseña')?.hasError('required') && navForm.get('contraseña')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu contraseña es necesaria</span>
                       </div>
 
                   </div>
@@ -112,18 +112,18 @@
                               <h1 class="Colortext">Registrate</h1>
                               <p class="Colortext">para acceder a los productos de nuestra tienda</p>
                               <input type="text" formControlName="nombre" class="form-control mb-3" name="" id="" placeholder="Tu nombre">
-                              <span *ngIf="navForm.get('nombre')?.hasError('required') && navForm.get('nombre')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu nombre es obligatorio</span>
+                              <span *ngIf="navForm.get('nombre')?.hasError('required') && navForm.get('nombre')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu nombre es necesario</span>
                               <input type="text" formControlName="apellido" class="form-control mb-3" name="" id="" placeholder="Tu apellido">
-                              <span *ngIf="navForm.get('apellido')?.hasError('required') && navForm.get('apellido')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu apellido es obligatorio</span>
+                              <span *ngIf="navForm.get('apellido')?.hasError('required') && navForm.get('apellido')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu apellido es necesario</span>
                               <div class="d-flex">
                                   <input type="email" formControlName="correo" class="form-control w-50 mb-3 me-1" placeholder="Tu correo eletronico">
-                                  <span *ngIf="navForm.get('correo')?.hasError('required') && navForm.get('correo')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu correo es obligatorio</span>
+                                  <span *ngIf="navForm.get('correo')?.hasError('required') && navForm.get('correo')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu correo es necesario</span>
                                   <input type="tel" formControlName="celular" class="form-control w-50 mb-3" placeholder="Tu numero de celular">
-                                  <span *ngIf="navForm.get('celular')?.hasError('required') && navForm.get('celular')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu n&uacute;mero celular es obligatorio</span>
+                                  <span *ngIf="navForm.get('celular')?.hasError('required') && navForm.get('celular')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu n&uacute;mero es necesario</span>
                               </div>
                               <div class="d-flex">
                                   <input type="text" formControlName="nombremascota" class="form-control w-50 mb-3" placeholder="Nombre de tu mascota">
-                                  <span *ngIf="navForm.get('nombremascota')?.hasError('required') && navForm.get('nombremascota')?.touched" class="text-bg-danger ps-1 fw-bold" >El nombre de tu mascota es obligatorio</span>
+                                  <span *ngIf="navForm.get('nombremascota')?.hasError('required') && navForm.get('nombremascota')?.touched" class="text-bg-danger ps-1 fw-bold" >El nombre de tu mascota es necesario</span>
                                   <div class="form-check ms-4">
                                       <label class="form-check-label" for="flexRadioDefault1">
                                           Perro
@@ -142,9 +142,9 @@
                                   </div>
                               </div>
                               <input type="password" formControlName="contraseñas" class="form-control mb-3" placeholder="Crea tu contraseña">
-                              <span *ngIf="navForm.get('contraseñas')?.hasError('required') && navForm.get('contraseñas')?.touched" class="text-bg-danger ps-1 fw-bold" >La contraseña es obligatorio</span>
+                              <span *ngIf="navForm.get('contraseñas')?.hasError('required') && navForm.get('contraseñas')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu contraseña es necesaria</span>
                               <input type="password" formControlName="confirmacioncontraseña" class="form-control mb-3" placeholder="Confirma tu contraseña">
-                              <span *ngIf="navForm.get('confirmacioncontraseña')?.hasError('required') && navForm.get('confirmacioncontraseña')?.touched" class="text-bg-danger ps-1 fw-bold" >La confirmación de la contraseña es obligatorio</span>
+                              <span *ngIf="navForm.get('confirmacioncontraseña')?.hasError('required') && navForm.get('confirmacioncontraseña')?.touched" class="text-bg-danger ps-1 fw-bold" >La confirmación de tu contraseña es necesaria</span>
                           </form>
                       </div>
                   </div>
