@@ -1,3 +1,7 @@
+.btn:hover {
+  background-color: #FFDB1C;
+  color: #1B3B6F !important;
+}
 
 .imgf{
     height: 195px;
@@ -28,3 +32,5 @@ h5{
 .tonobtn{
     color: #1B3B6F;
 }
+
+
