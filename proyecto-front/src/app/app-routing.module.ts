@@ -5,13 +5,14 @@ import { GestionProductosComponent } from './components/admi/gestion-productos/g
 import { GatosComponent } from './components/gatos/gatos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PerrosComponent } from './components/perros/perros.component';
+import { gestionProducto } from './models/modelgestionproducto';
 
 const routes: Routes = [
   {path: '', component:InicioComponent},
   {path: 'perros', component:PerrosComponent},
   {path: 'gatos', component:GatosComponent},
-  {path:"creacionproducto",component:GestionProductosComponent},
-  {path:"administrador",component:AdmiUsersComponent}
+  {path:"administrador",component:AdmiUsersComponent},
+  {path:"gestionproducto",component:GestionProductosComponent},
 
 ];
 
