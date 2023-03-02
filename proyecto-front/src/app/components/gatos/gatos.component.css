@@ -1,0 +1,36 @@
+.btn:hover {
+  background-color: #FFDB1C;
+  color: #1B3B6F !important;
+}
+
+.imgf{
+    height: 195px;
+}
+h5{
+    margin-left: 104px;
+}
+.precio,h5, h6{
+    color: #1B3B6F;
+}
+.boton1{
+    background-color: #1B3B6F;
+    transform: translateX(50%);
+}
+.opcionNav{
+    transition: all 200ms;
+}
+.opcionNav:hover{
+    background-color: #FFDB1C;
+    border-radius: 15px;
+}
+.opciong{
+    background-color: #FFDB1C;
+    border-radius: 15px;
+
+}
+
+.tonobtn{
+    color: #1B3B6F;
+}
+
+
