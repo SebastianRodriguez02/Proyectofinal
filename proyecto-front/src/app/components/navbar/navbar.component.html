@@ -83,14 +83,14 @@
                       </div>
                       <div class="mb-3  w-100">
                           <label for="exampleFormControlInput2" class="form-label">Tu contraseña</label>
-                          <input type="text" formControlName="contraseña"  class="form-control" placeholder="contraseña">
+                          <input type="password" formControlName="contraseña"  class="form-control" placeholder="contraseña">
                           <span *ngIf="navForm.get('contraseña')?.hasError('required') && navForm.get('contraseña')?.touched" class="text-bg-danger ps-1 fw-bold" >Tu contraseña es necesaria</span>
                       </div>
 
                   </div>
                   <div class="text-center">
-                      <button type="button" class="btn colorinicio text-white  px-4 ms-4"
-                          data-bs-dismiss="offcanvas" aria-label="Close">Entrar</button>
+                      <a routerLink="/administrador"><button type="button" class="btn colorinicio text-white  px-4 ms-4"
+                          data-bs-dismiss="offcanvas" aria-label="Close">Entrar</button></a>
                   </div>
               </form>
           </div>
