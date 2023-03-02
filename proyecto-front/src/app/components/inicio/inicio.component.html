@@ -194,7 +194,7 @@
   <div class="Col-12 py-5 border contactos my-3 ps-3" id="contactenos">
 
 
-    <form class="">
+    <form [formGroup]="contactoForm" (ngSubmit)="crearContacto()" class="">
       <h5 class="Colortext fw-bold">Contáctanos</h5>
       <div class="px-3 d-lg-flex d-md-block">
         <div>
@@ -202,19 +202,22 @@
             <span class="Colortext">Déjanos un mensaje y nos pondremos en contacto.</span>
           </p>
           <div class="col-lg-6 col-md-12 px-lg-5 px-md-0 w-100">
-            <input type="text" placeholder="Tu nombre" class=" form-control w-100 ">
+            <input type="text" formControlName="nombre" placeholder="Tu nombre" class=" form-control w-100 ">
+            <span *ngIf="contactoForm.get('nombre')?.hasError('required') && contactoForm.get('nombre')?.touched" class="text-danger ps-1 fw-bold">Debes poner un nombre</span>
             <div class="d-lg-flex d-md-block">
-              <input type="email" placeholder="Tu correo electronico" class=" me-2 form-control my-2 ">
-              <input type="tel" placeholder="Tu número de celular " class="form-control my-2  ">
+              <input type="email" formControlName="correo" placeholder="Tu correo electronico" class=" me-2 form-control my-2 ">
+              <span *ngIf="contactoForm.get('correo')?.hasError('required') && contactoForm.get('correo')?.touched" class="text-danger ps-1 fw-bold">Debes poner un correo</span>
+              <input type="tel" formControlName="numero" placeholder="Tu número de celular " class="form-control my-2  ">
+              <span  *ngIf="contactoForm.get('numero')?.hasError('required') && contactoForm.get('numero')?.touched" class="text-danger ps-1 fw-bold">Debes poner un numero</span>
             </div>
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="w-75">
             <label for="">Tu mensaje</label>
-            <textarea class="form-control bg-light " cols="10" rows="5"></textarea>
+            <textarea class="form-control bg-light " formControlName="mensaje" cols="10" rows="5"></textarea>
             <div class="d-flex justify-content-end align-items-end">
-              <button class="btn colorEnviar mt-2 px-4 ">Enviar</button>
+              <button class="btn colorEnviar mt-2 px-4 " type="submit" [disabled]="contactoForm.invalid">Enviar</button>
             </div>
           </div>
 
