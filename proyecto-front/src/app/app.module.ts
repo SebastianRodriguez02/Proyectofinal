@@ -29,7 +29,8 @@ import { ListaProductosComponent } from './components/admi/lista-productos/lista
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

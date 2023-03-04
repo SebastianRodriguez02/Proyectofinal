@@ -6,7 +6,7 @@ import { ListaProductosComponent } from './components/admi/lista-productos/lista
 import { GatosComponent } from './components/gatos/gatos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PerrosComponent } from './components/perros/perros.component';
-import { gestionProducto } from './models/modelgestionproducto';
+
 
 const routes: Routes = [
   {path: '', component:InicioComponent},
