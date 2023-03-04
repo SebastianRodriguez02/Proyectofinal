@@ -27,4 +27,7 @@ export class ProductosService {
   getProducto(id:string | null):Observable<any>{
     return this.http.get(this.url+'/optener-producto/'+id)
   }
+  putProducto(id:string, producto:gestionProducto): Observable<any>{
+    return this.http.put(this.url+'/actualizar-producto/'+id, producto)
+  }
 }

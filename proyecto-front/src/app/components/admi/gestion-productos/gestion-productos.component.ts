@@ -32,17 +32,33 @@ export class GestionProductosComponent implements OnInit {
     }
 
     enviarInformacion() {
-        console.log(this.productoForm.value)
-        this._productoService.postProducto(this.productoForm.value).subscribe(data => {
+        if (this.id == null){
+          //crear producto
+          this._productoService.postProducto(this.productoForm.value).subscribe(data => {
             Swal.fire({
                 icon: 'success',
                 title: 'Producto creados',
 
             })
+            this.router.navigate(['/listaproductos'])
 
         }, error => {
             console.log(error)
         })
+        }else{
+           // actualizar producto
+         this._productoService.putProducto(this.id, this.productoForm.value).subscribe(data =>{
+          Swal.fire({
+            icon: 'success',
+            title: 'Producto actualizado',
+
+        })
+        this.router.navigate(['/listaproductos'])
+         }, error => {
+          console.log(error)
+      })
+        }
+
     }
     accionSolicitada() {
         if (this.id !== null)
