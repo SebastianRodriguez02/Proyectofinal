@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContactoService} from 'src/app/service/contactoservice.service'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-inicio',
@@ -6,16 +7,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-
+  tituloComponente: string = 'Crear'
   contactoForm: FormGroup;
+  regexNumero = /^[0-9]+$/;
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder, private _contatoService:ContactoService){
 
     this.contactoForm = this.fb.group({
 
         nombre:['', Validators.required],
-        correo:['', Validators.required, Validators.email],
-        numero:['', Validators.required],
+        correo:['', [Validators.required, Validators.email]],
+        numero:['', [Validators.required, Validators.pattern(this.regexNumero)]],
         mensaje:['', Validators.required]
     })
 
@@ -25,7 +27,10 @@ export class InicioComponent implements OnInit {
   }
   crearContacto(){
     console.log(this.contactoForm);
-    console.log(this.contactoForm.get('nombre'));
+    this._contatoService.postContacto(this.contactoForm.value).subscribe(data=>{
+      console.log("archivo subido")
+
+    })
   }
 
 }

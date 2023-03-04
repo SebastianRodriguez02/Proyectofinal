@@ -27,7 +27,8 @@ import { GestionProductosComponent } from './components/admi/gestion-productos/g
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

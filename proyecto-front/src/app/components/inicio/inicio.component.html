@@ -205,10 +205,14 @@
             <input type="text" formControlName="nombre" placeholder="Tu nombre" class=" form-control w-100 ">
             <span *ngIf="contactoForm.get('nombre')?.hasError('required') && contactoForm.get('nombre')?.touched" class="text-danger ps-1 fw-bold">Debes poner un nombre</span>
             <div class="d-lg-flex d-md-block">
-              <input type="email" formControlName="correo" placeholder="Tu correo electronico" class=" me-2 form-control my-2 ">
+              <div>
+                <input type="email" formControlName="correo" placeholder="Tu correo electronico" class=" me-2 form-control my-2 ">
               <span *ngIf="contactoForm.get('correo')?.hasError('required') && contactoForm.get('correo')?.touched" class="text-danger ps-1 fw-bold">Debes poner un correo</span>
-              <input type="tel" formControlName="numero" placeholder="Tu número de celular " class="form-control my-2  ">
+              </div>
+              <div>
+                <input type="tel" formControlName="numero" placeholder="Tu número de celular " class="form-control my-2  ">
               <span  *ngIf="contactoForm.get('numero')?.hasError('required') && contactoForm.get('numero')?.touched" class="text-danger ps-1 fw-bold">Debes poner un numero</span>
+              </div>
             </div>
           </div>
         </div>

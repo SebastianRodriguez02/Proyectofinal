@@ -15,7 +15,7 @@ const ContactoShema = mongoose.Schema({
     },
     mensaje:{
         type: String,
-        required: true
+        required: false
     },
      fec_cre:{
         type: Date,
