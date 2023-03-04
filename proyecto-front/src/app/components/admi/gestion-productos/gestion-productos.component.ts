@@ -55,7 +55,7 @@ export class GestionProductosComponent implements OnInit {
         })
         this.router.navigate(['/listaproductos'])
          }, error => {
-          console.log(error)
+
       })
         }
 
