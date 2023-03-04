@@ -12,7 +12,8 @@ const routes: Routes = [
   {path: '', component:InicioComponent},
   {path: 'perros', component:PerrosComponent},
   {path: 'gatos', component:GatosComponent},
-  {path:"creacionproducto",component:GestionProductosComponent},
+  {path: 'creacionproducto', component:GestionProductosComponent},
+  {path: 'editarproducto/:id', component:GestionProductosComponent},
   {path:"administrador",component:AdmiUsersComponent},
   {path:"listaproductos",component:ListaProductosComponent},
 
