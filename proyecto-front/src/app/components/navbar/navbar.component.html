@@ -79,17 +79,17 @@
                       <div class="mb-3  w-100">
                           <label for="exampleFormCon5trolInput1" class="form-label">Tu usuario</label>
                           <input type="text" formControlName="usuario" class="form-control" placeholder="name@example.com">
-                          <span *ngIf="navForm.get('usuario')?.hasError('required') && navForm.get('usuario')?.touched" class="text-danger ps-1 fw-bold" >Tu correo es necesario</span>
+
                       </div>
                       <div class="mb-3  w-100">
                           <label for="exampleFormControlInput2" class="form-label">Tu contraseña</label>
                           <input type="password" formControlName="contrasena"  class="form-control" placeholder="contraseña">
-                          <span *ngIf="navForm.get('contrasena')?.hasError('required') && navForm.get('contrasena')?.touched" class="text-danger ps-1 fw-bold" >Tu contraseña es necesaria</span>
+
                       </div>
 
                   </div>
                   <div class="text-center">
-                      <a routerLink="/administrador"><button type="button" class="btn colorinicio text-white  px-4 ms-4"
+                      <a routerLink="/administrador"><button type="submit" class="btn colorinicio text-white  px-4 ms-4"
                           data-bs-dismiss="offcanvas" aria-label="Close">Entrar</button></a>
                   </div>
               </form>
@@ -111,15 +111,15 @@
                           <form [formGroup]="navForm" (ngSubmit)="iniciarSesion()">
                               <h1 class="Colortext">Registrate</h1>
                               <p class="Colortext">para acceder a los productos de nuestra tienda</p>
-                              <input type="text" formControlName="nombre" class="form-control mb-3" name="" id="" placeholder="Tu nombre">
+                              <input type="text" formControlName="nombre" class="form-control mb-3" placeholder="Tu nombre">
                               <span *ngIf="navForm.get('nombre')?.hasError('required') && navForm.get('nombre')?.touched" class="text-danger ps-1 fw-bold" >Tu nombre es necesario</span>
-                              <input type="text" formControlName="apellido" class="form-control mb-3" name="" id="" placeholder="Tu apellido">
+                              <input type="text" formControlName="apellido" class="form-control mb-3" placeholder="Tu apellido">
                               <span *ngIf="navForm.get('apellido')?.hasError('required') && navForm.get('apellido')?.touched" class="text-danger ps-1 fw-bold" >Tu apellido es necesario</span>
                               <div class="d-flex">
                                   <input type="email" formControlName="correo" class="form-control w-50 mb-3 me-1" placeholder="Tu correo eletronico">
                                   <span *ngIf="navForm.get('correo')?.hasError('required') && navForm.get('correo')?.touched" class="text-danger ps-1 fw-bold" >Tu correo es necesario</span>
-                                  <input type="tel" formControlName="celular" class="form-control w-50 mb-3" placeholder="Tu numero de celular">
-                                  <span *ngIf="navForm.get('celular')?.hasError('required') && navForm.get('celular')?.touched" class="text-danger ps-1 fw-bold" >Tu n&uacute;mero es necesario</span>
+                                  <input type="tel" formControlName="numero" class="form-control w-50 mb-3" placeholder="Tu numero de celular">
+                                  <span *ngIf="navForm.get('numero')?.hasError('required') && navForm.get('numero')?.touched" class="text-danger ps-1 fw-bold" >Tu n&uacute;mero es necesario</span>
                               </div>
                               <div class="d-flex">
                                   <input type="text" formControlName="nombreMascota" class="form-control w-50 mb-3" placeholder="Nombre de tu mascota">
