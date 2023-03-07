@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class NavbarComponent{
 
   navForm: FormGroup;
-  nombreDeProducto:any; 
+  nombreDeProducto:any;
   constructor(private fb: FormBuilder, private router: Router, private _registroservice:RegistroService) {
     this.navForm = this.fb.group ({
       nombre: ['', Validators.required],
@@ -30,7 +30,15 @@ export class NavbarComponent{
 
   iniciarSesion(){
     console.log(this.navForm);
-    this._registroservice.postRegistro(this.navForm.value).subscribe(data=> {console.log("registro subido")})
+    this._registroservice.postRegistro(this.navForm.value).subscribe(data=> {
+      Swal.fire ({
+        title: 'Exito!',
+        text: 'Tu registro se ha realizado correctamente',
+        icon: 'success',
+        confirmButtonText: 'Vale'
+      })
+      return this.navForm.reset()
+    })
   }
   llamarProducto(){
     console.log('clic en boton', this.nombreDeProducto)

@@ -34,7 +34,7 @@ export class InicioComponent implements OnInit {
     this._contatoService.postContacto(this.contactoForm.value).subscribe(data=>{
       Swal.fire ({
           title: 'Exito!',
-          text: 'Su mensaje se a enviado',
+          text: 'Tu mensaje se a enviado',
           icon: 'success',
           confirmButtonText: 'Vale'
         })
