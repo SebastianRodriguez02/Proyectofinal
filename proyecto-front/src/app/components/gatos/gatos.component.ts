@@ -22,6 +22,7 @@ export class GatosComponent implements OnInit{
 
   filtrarGato(gato: string, producto: any) {
     const myDocument:any = document.getElementById('document')
+
     if(gato == 'gato'){
       myDocument.innerHTML += `<div class='col-lg-4  col-sm-12'>
       <div class='card h-100'>
@@ -44,7 +45,9 @@ export class GatosComponent implements OnInit{
 
       </div>
     </div>`
+
     }
+
   }
 
 

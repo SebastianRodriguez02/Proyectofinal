@@ -24,7 +24,7 @@ export class PerrosComponent implements OnInit {
     if (perro == 'perro') {
       myDocument.innerHTML += `<div class='col-lg-4  col-sm-12'>
       <div class='card h-100'>
-      <img src=${producto.url} class="card-img-top w-50 mt-3 rounded mx-auto d-block"
+      <img src="./../../../${producto.url}" class="card-img-top w-50 mt-3 rounded mx-auto d-block"
       alt="..."><br>
         <div class="card-body">
           <h6 class="card-title fs text-center">${producto.nombreProducto}</h6>
