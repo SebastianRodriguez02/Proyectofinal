@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ContactoService} from 'src/app/service/contactoservice.service'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -31,6 +33,30 @@ export class InicioComponent implements OnInit {
       console.log("archivo subido")
 
     })
+  }
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 2
+      },
+      940: {
+        items: 2
+      }
+    },
+    nav: true
   }
 
 }
