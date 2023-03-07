@@ -22,8 +22,8 @@
           </li>
           </ul>
           <div class="input-group mb-3 w-auto pt-3">
-              <input type="text" class="form-control" placeholder="¿Qu&eacute; necesitas hoy?">
-              <span class="input-group-text bg-light" id="basic-addon2"><i
+              <input type="text" class="form-control" placeholder="¿Qu&eacute; necesitas hoy?" [ngModel]="nombreDeProducto">
+              <span (click)="llamarProducto()" class="input-group-text bg-light" id="basic-addon2"><i
                       class="fa-solid fa-magnifying-glass"></i></span>
           </div>
           <ul class="navbar-nav mb-2 mb-lg-0 d-flex">
