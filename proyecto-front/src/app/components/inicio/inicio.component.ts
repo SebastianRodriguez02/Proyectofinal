@@ -3,6 +3,8 @@ import {ContactoService} from 'src/app/service/contactoservice.service'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -30,7 +32,13 @@ export class InicioComponent implements OnInit {
   crearContacto(){
     console.log(this.contactoForm);
     this._contatoService.postContacto(this.contactoForm.value).subscribe(data=>{
-      console.log("archivo subido")
+      Swal.fire ({
+          title: 'Exito!',
+          text: 'Su mensaje se a enviado',
+          icon: 'success',
+          confirmButtonText: 'Vale'
+        })
+        return this.contactoForm.reset()
 
     })
   }
@@ -58,5 +66,7 @@ export class InicioComponent implements OnInit {
     },
     nav: true
   }
+
+
 
 }
