@@ -13,9 +13,9 @@ export class NavbarComponent{
 
   navForm: FormGroup;
 
-  nombreDeProducto:any; 
-
   nombreDeProducto:any;
+
+
 
   constructor(private fb: FormBuilder, private router: Router, private _registroservice:RegistroService) {
     this.navForm = this.fb.group ({
@@ -43,9 +43,6 @@ export class NavbarComponent{
       })
       return this.navForm.reset()
     })
-  }
-  llamarProducto(){
-    console.log('clic en boton', this.nombreDeProducto)
   }
   llamarProducto(){
     console.log('clic en boton', this.nombreDeProducto)

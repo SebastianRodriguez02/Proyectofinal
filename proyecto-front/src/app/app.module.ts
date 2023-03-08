@@ -17,7 +17,7 @@ import { ListaProductosComponent } from './components/admi/lista-productos/lista
 import { FormsModule } from '@angular/forms';
 import { GestionContactoComponent } from './components/admi/gestion-contacto/gestion-contacto.component';
 import { ListaContactosComponent } from './components/admi/lista-contactos/lista-contactos.component';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
