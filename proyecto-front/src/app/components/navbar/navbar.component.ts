@@ -12,7 +12,11 @@ import Swal from 'sweetalert2';
 export class NavbarComponent{
 
   navForm: FormGroup;
+
+  nombreDeProducto:any; 
+
   nombreDeProducto:any;
+
   constructor(private fb: FormBuilder, private router: Router, private _registroservice:RegistroService) {
     this.navForm = this.fb.group ({
       nombre: ['', Validators.required],
@@ -39,6 +43,9 @@ export class NavbarComponent{
       })
       return this.navForm.reset()
     })
+  }
+  llamarProducto(){
+    console.log('clic en boton', this.nombreDeProducto)
   }
   llamarProducto(){
     console.log('clic en boton', this.nombreDeProducto)

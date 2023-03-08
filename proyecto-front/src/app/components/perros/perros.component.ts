@@ -47,6 +47,7 @@ export class PerrosComponent implements OnInit {
     // </div>`
     // }
 
+
     const myDocument: any = document.getElementById('document')
     if (perro == 'perro') {
       myDocument.innerHTML += `<div class='col-lg-4  col-sm-12'>
@@ -71,6 +72,7 @@ export class PerrosComponent implements OnInit {
       </div>
     </div>`
     }
+
 
   }
 
