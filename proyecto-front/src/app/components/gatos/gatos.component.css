@@ -32,5 +32,7 @@ h5{
 .tonobtn{
     color: #1B3B6F;
 }
-
+#btnQuitar, #btnAgregar{
+    cursor: pointer;
+}
 
