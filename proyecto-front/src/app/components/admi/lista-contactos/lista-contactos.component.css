@@ -155,8 +155,17 @@ align-items: center;
 .botonadministrador{
   background-color: #1B3B6F;
   color: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+table {
+  table-layout: fixed;
+}
+
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+.panel{
+  color: #1B3B6F;
+  width: 200px;
+}
