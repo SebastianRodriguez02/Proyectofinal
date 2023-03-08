@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { GestionProductosComponent } from './components/admi/gestion-productos/g
 import { ListaProductosComponent } from './components/admi/lista-productos/lista-productos.component';
 import { GestionContactoComponent } from './components/admi/gestion-contacto/gestion-contacto.component';
 import { ListaContactosComponent } from './components/admi/lista-contactos/lista-contactos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,10 @@ import { ListaContactosComponent } from './components/admi/lista-contactos/lista
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    CarouselModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
