@@ -41,8 +41,9 @@ export class GestionProductosComponent implements OnInit {
 
             })
             this.router.navigate(['/listaproductos'])
+            return this.productoForm.reset()
 
-        }, error => {
+        } , error => {
             console.log(error)
         })
         }else{

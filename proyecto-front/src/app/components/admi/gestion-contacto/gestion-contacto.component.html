@@ -1,0 +1,62 @@
+<section class="container">
+  <div class="row">
+    <div class="col-12 text-center pt-5  ">
+      <div class="Pets">
+        <h3 class="fw-bold"> {{tituloComponente}} contactos</h3>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container mb-5">
+  <h1 class="my-5 text-center"></h1>
+  <div class="mb-4"><a routerLink="/listacontactos" class="texto text-decoration-none mb-3">Lista de contactos</a></div>
+
+  <form [formGroup]="contactoForm" (ngSubmit)="enviarInformacion()">
+    <div class="form-floating mb-3 ">
+      <input type="text" class="form-control" id="nombre" formControlName="nombre">
+      <label for="nombre">Nombre</label>
+      <span *ngIf="contactoForm.get('nombre')?.hasError('required') && contactoForm.get('nombre')?.touched"
+        class="text-danger fw-bold">Digite su nombre</span>
+
+
+    </div>
+    <div class="form-floating mb-3 ">
+      <input type="text" class="form-control" id="correo" formControlName="correo">
+      <label for="correo">Correo</label>
+      <span *ngIf="contactoForm.get('correo')?.hasError('required') && contactoForm.get('correo')?.touched"
+        class="text-danger fw-bold">Digite el correo</span>
+
+
+    </div>
+
+    <div class="form-floating mb-3 ">
+
+      <div class="form-floating mb-3 ">
+        <input type="text" class="form-control" id="numero" formControlName="numero">
+        <label for="numero">Numero </label>
+        <span *ngIf="contactoForm.get('numero')?.hasError('required') && contactoForm.get('numero')?.touched"
+        class="text-danger fw-bold">Digite el numero</span>
+        <span *ngIf="contactoForm.get('numero')?.hasError('pattern') && contactoForm.get('numero')?.touched"
+        class="text-danger fw-bold">&nbsp;El numero no puede contener letras</span>
+      </div>
+
+
+
+    </div>
+
+    <div class="form-floating mb-3 ">
+      <input type="text" class="form-control" id="mensaje" formControlName="mensaje">
+      <label for="mensaje">Mensaje</label>
+      <span *ngIf="contactoForm.get('mensaje')?.hasError('required') && contactoForm.get('mensaje')?.touched"
+        class="text-danger fw-bold">Digite el mensaje</span>
+
+
+    </div>
+    <div class="d-flex justify-content-center align-items-center my-4">
+      <button [disabled]="contactoForm.invalid" type="submit" class="btn botonadministrador">Enviar</button>
+    </div>
+  </form>
+</section>
