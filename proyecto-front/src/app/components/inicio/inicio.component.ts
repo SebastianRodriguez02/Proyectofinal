@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ContactoService} from 'src/app/service/contactoservice.service'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-=======
+
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
@@ -40,9 +40,8 @@ export class InicioComponent implements OnInit {
 
           text: 'Su mensaje se a enviado',
 
-          text: 'Tu mensaje se a enviado',
-
           icon: 'success',
+
           confirmButtonText: 'Vale'
         })
         return this.contactoForm.reset()
