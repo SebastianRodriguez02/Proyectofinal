@@ -14,6 +14,14 @@
               <h6 class="card-title fs text-center">{{producto.nombreProducto}}</h6>
               <p class="precio text-center">{{producto.precio}}</p>
 
+
+    <div id="document" *ngFor="let producto of listaProductos" class="row row-cols-1 row-cols-md-3 g-4">
+      {{
+
+        filtrarGato(producto.categoria, producto)
+
+      }}
+
               <div class="input-group mb-3 px-5">
                 <span class="input-group-text" id="btnQuitar" (click)="quitarCantidad(i)">-</span>
                 <input [(ngModel)]="producto.cantidad" type="number" class="form-control text-center" placeholder="0" id="textCantidad"
@@ -27,6 +35,7 @@
           </div>
         </div>
         </div>
+
     </div>
 
 </div>

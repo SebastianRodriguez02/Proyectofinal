@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ContactoService} from 'src/app/service/contactoservice.service'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+=======
 import { OwlOptions } from 'ngx-owl-carousel-o';
+
 
 import Swal from 'sweetalert2';
 
@@ -34,7 +37,11 @@ export class InicioComponent implements OnInit {
     this._contatoService.postContacto(this.contactoForm.value).subscribe(data=>{
       Swal.fire ({
           title: 'Exito!',
+
+          text: 'Su mensaje se a enviado',
+
           text: 'Tu mensaje se a enviado',
+
           icon: 'success',
           confirmButtonText: 'Vale'
         })
@@ -70,6 +77,8 @@ export class InicioComponent implements OnInit {
     },
     nav: true
   }
+
+
 
 
 
