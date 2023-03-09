@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ContactoService} from 'src/app/service/contactoservice.service'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
+
 import Swal from 'sweetalert2';
 
 @Component({
@@ -40,6 +43,38 @@ export class InicioComponent implements OnInit {
 
     })
   }
+  customOptions: OwlOptions = {
+    loop: true,
+    margin:10,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 2
+      },
+      940: {
+        items: 2
+      }
+    },
+    nav: true
+  }
+
+
+
+
 
 
 

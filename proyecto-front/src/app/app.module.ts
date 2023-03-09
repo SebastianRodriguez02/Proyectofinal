@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,10 @@ import { GatosComponent } from './components/gatos/gatos.component';
 import { AdmiUsersComponent} from './components/admi/admi-users/admi-users.component';
 import { GestionProductosComponent } from './components/admi/gestion-productos/gestion-productos.component';
 import { ListaProductosComponent } from './components/admi/lista-productos/lista-productos.component';
+import { FormsModule } from '@angular/forms';
+import { GestionContactoComponent } from './components/admi/gestion-contacto/gestion-contacto.component';
+import { ListaContactosComponent } from './components/admi/lista-contactos/lista-contactos.component';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +29,18 @@ import { ListaProductosComponent } from './components/admi/lista-productos/lista
     GatosComponent,
     AdmiUsersComponent,
     GestionProductosComponent,
-    ListaProductosComponent
+    ListaProductosComponent,
+    GestionContactoComponent,
+    ListaContactosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    CarouselModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
