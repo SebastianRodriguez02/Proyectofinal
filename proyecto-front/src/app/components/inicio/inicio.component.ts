@@ -37,6 +37,7 @@ export class InicioComponent implements OnInit {
           title: 'Exito!',
           text: 'Su mensaje se a enviado',
           icon: 'success',
+
           confirmButtonText: 'Vale'
         })
         return this.contactoForm.reset()
@@ -79,3 +80,4 @@ export class InicioComponent implements OnInit {
 
 
 }
+

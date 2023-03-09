@@ -4,10 +4,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { InicioComponent } from './components/inicio/inicio.component';
+import { InicioComponent} from './components/inicio/inicio.component'
 import { FooterComponent } from './components/footer/footer.component';
 import { PerrosComponent } from './components/perros/perros.component';
 import { GatosComponent } from './components/gatos/gatos.component';
@@ -19,7 +20,8 @@ import { GestionContactoComponent } from './components/admi/gestion-contacto/ges
 import { ListaContactosComponent } from './components/admi/lista-contactos/lista-contactos.component';
 
 
-@NgModule({
+
+@NgModule ({
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -40,6 +42,9 @@ import { ListaContactosComponent } from './components/admi/lista-contactos/lista
     HttpClientModule,
     FormsModule,
     CarouselModule
+
+
+
 
   ],
   providers: [],
