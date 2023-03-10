@@ -20,8 +20,7 @@ import { ListaContactosComponent } from './components/admi/lista-contactos/lista
 import { GestionUsuariosComponent } from './components/admi/gestion-usuarios/gestion-usuarios.component';
 import { ListaUsuariosComponent } from './components/admi/lista-usuarios/lista-usuarios.component';
 import { FormsModule } from '@angular/forms';
-import { GestionContactoComponent } from './components/admi/gestion-contacto/gestion-contacto.component';
-import { ListaContactosComponent } from './components/admi/lista-contactos/lista-contactos.component';
+
 
 
 
