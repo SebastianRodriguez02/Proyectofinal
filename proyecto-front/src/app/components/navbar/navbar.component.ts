@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class NavbarComponent{
 
   navForm: FormGroup;
-
+  regexNumero = /^[0-9]+$/;
   nombreDeProducto:any;
 
 
@@ -21,8 +21,8 @@ export class NavbarComponent{
     this.navForm = this.fb.group ({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
-      correo: ['', Validators.required],
-      numero: ['', Validators.required],
+      correo: ['', [Validators.required, Validators.email]],
+      numero: ['', [Validators.required, Validators.pattern(this.regexNumero)]],
       nombreMascota: ['', Validators.required],
       tipo: ['', Validators.required],
       contrasena: ['', Validators.required],
