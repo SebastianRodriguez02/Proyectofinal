@@ -15,6 +15,8 @@ import { GestionProductosComponent } from './components/admi/gestion-productos/g
 import { ListaProductosComponent } from './components/admi/lista-productos/lista-productos.component';
 import { GestionContactoComponent } from './components/admi/gestion-contacto/gestion-contacto.component';
 import { ListaContactosComponent } from './components/admi/lista-contactos/lista-contactos.component';
+import { GestionUsuariosComponent } from './components/admi/gestion-usuarios/gestion-usuarios.component';
+import { ListaUsuariosComponent } from './components/admi/lista-usuarios/lista-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ListaContactosComponent } from './components/admi/lista-contactos/lista
     GestionProductosComponent,
     ListaProductosComponent,
     GestionContactoComponent,
-    ListaContactosComponent
+    ListaContactosComponent,
+    GestionUsuariosComponent,
+    ListaUsuariosComponent
   ],
   imports: [
     BrowserModule,
