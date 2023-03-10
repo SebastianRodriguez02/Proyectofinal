@@ -28,6 +28,7 @@ const routes: Routes = [
   {path:"editarusuario/:id",component:GestionUsuariosComponent},
 
 
+
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component} from '@angular/core';
+import { FormGroup, FormBuilder,  Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegistroService } from 'src/app/service/registro.service';
 import Swal from 'sweetalert2';
@@ -9,49 +9,45 @@ import Swal from 'sweetalert2';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
 
   navForm: FormGroup;
+  regexNumero = /^[0-9]+$/;
+  nombreDeProducto:any;
+
+
 
   constructor(private fb: FormBuilder, private router: Router, private _registroservice:RegistroService) {
     this.navForm = this.fb.group ({
-
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
-      correo: ['', Validators.required],
-      celular: ['', Validators.required],
+      correo: ['', [Validators.required, Validators.email]],
+      numero: ['', [Validators.required, Validators.pattern(this.regexNumero)]],
       nombreMascota: ['', Validators.required],
+      tipo: ['', Validators.required],
       contrasena: ['', Validators.required],
-      confirmacioncontrasena: ['', Validators.required],
+      retificacionContra: ['', Validators.required],
 
     })
    }
 
-  ngOnInit(): void {
-  }
+
   iniciarSesion(){
     console.log(this.navForm);
-    this._registroservice.postRegistro(this.navForm.value).subscribe(data=> {console.log("registro subido")})
+    this._registroservice.postRegistro(this.navForm.value).subscribe(data=> {
+      Swal.fire ({
+        title: 'Exito!',
+        text: 'Tu registro se ha realizado correctamente',
+        icon: 'success',
+        confirmButtonText: 'Vale'
+      })
+      return this.navForm.reset()
+    })
+  }
+  llamarProducto(){
+    console.log('clic en boton', this.nombreDeProducto)
   }
 }
-    // const REGISTRO: Registro = {
-    //   nombre: this.navForm.get('nombre')?.value,
-    //   apellido: this.navForm.get('apellido')?.value,
-    //   correo:  this.navForm.get('correo')?.value,
-    //   numero:  this.navForm.get('numero')?.value,
-    //   nombreMascota: this.navForm.get('nombreMascosta')?.value,
-    //   tipo:  this.navForm.get('tipo')?.value,
-    //   contrasena: this.navForm.get('contrasena')?.value,
-    //   retificacionContra: this.navForm.get('retificacionContra')?.value
-    // }
 
-    // console.log(REGISTRO)
-    // this.router.navigate(['/']);
-    // Swal.fire ({
-    //   title: 'Exito!',
-    //   text: 'El registro se creo correctamente',
-    //   icon: 'success',
-    //   confirmButtonText: 'Vale'
-    // })
 
 

@@ -24,3 +24,9 @@
   color: #1B3B6F;
 }
 
+.wsp {
+  width: 20%;
+  position: fixed;
+  z-index: 999;
+  left: 80%;
+}
