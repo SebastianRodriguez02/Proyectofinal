@@ -66,8 +66,8 @@ exports.eliminarContacto = async (req, res) => {
             res.status(400).send('Contato no encontrado')
         }
         await Contacto.findOneAndRemove({_id: req.params.id})
-        res.send('El contacto fue eliminado')
         console.log(contacto)
+        res.send('El contacto fue eliminado')
 
     } catch (error) {
         console.log(error)
