@@ -20,6 +20,7 @@ import { ListaContactosComponent } from './components/admi/lista-contactos/lista
 import { GestionUsuariosComponent } from './components/admi/gestion-usuarios/gestion-usuarios.component';
 import { ListaUsuariosComponent } from './components/admi/lista-usuarios/lista-usuarios.component';
 import { FormsModule } from '@angular/forms';
+import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
 
 
 
@@ -39,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     GestionContactoComponent,
     ListaContactosComponent,
     GestionUsuariosComponent,
-    ListaUsuariosComponent
+    ListaUsuariosComponent,
+    DetalleProductoComponent
 
   ],
   imports: [
