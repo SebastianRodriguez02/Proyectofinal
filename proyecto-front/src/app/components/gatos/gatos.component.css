@@ -33,6 +33,7 @@ h5{
     color: #1B3B6F;
 }
 
+
 #btnQuitar, #btnAgregar{
     cursor: pointer;
 }
@@ -41,4 +42,5 @@ h5{
 .imggato{
   background-repeat: no-repeat !important;
 }
+
 

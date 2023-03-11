@@ -4,6 +4,7 @@
 
 <div class="container w-75">
   <div class="row d-flex justify-content-center align-items-center">
+
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div id="document" *ngFor="let producto of listaProductos; let i=index" class='col-lg-4  col-sm-12'>
         <div *ngIf="producto.categoria === 'gato'">
@@ -14,12 +15,12 @@
               <p class="precio text-center">{{producto.precio}}</p>
 
 
-
-              {{
+    <div id="document" *ngFor="let producto of listaProductos" class="row row-cols-1 row-cols-md-3 g-4">
+      {{
 
               filtrarGato(producto.categoria, producto)
 
-              }}
+      }}
 
               <div class="input-group mb-3 px-5">
                 <span class="input-group-text" id="btnQuitar" (click)="quitarCantidad(i)">-</span>
@@ -33,9 +34,12 @@
 
           </div>
         </div>
-      </div>
+        </div>
 
     </div>
 
-  </div>
 </div>
+</div>
+
+
+
