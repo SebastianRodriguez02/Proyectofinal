@@ -1,0 +1,126 @@
+<div class="container marginmobile">
+  <div class="mt-5">
+      <a routerLink="/perros" class="text-decoration-none coloricon"><i class="fa-solid fa-arrow-left"></i><span class="coloricon ms-3">Volver</span></a>
+  </div>
+  <section class="row">
+
+  <div class="col-lg-6 col-sm-12 mt-5">
+      <h1 class="Titles">Bufanda para perros green</h1>
+      <img [src]="imgselecionada"  id="imgProductoGaleria" alt="" width="300px" class="mt-4">
+      <h6 class="mt-3 captiontext">*Imágenes de referencia</h6>
+
+      <div class="mt-4 row" id="mosaicoImgsProducto" >
+        <div class="col-3" *ngFor="let img of arrayGaleria " style="cursor: pointer;" (click)="selecionarImg(img)"><img width="100" [src]="img" alt=""></div>
+
+      </div>
+
+  </div>
+
+  <div class="col-lg-6 col-sm-12 mt-lg-5">
+      <h4 class="Titles">Descripción</h4>
+      <p>Bufanda para perro hecha de lana ecoamigable. Con la bufanda green, tu perro tendra un look bohemio y fresco que resaltará su belleza natural. Disponible en talla pequeña, mediana y grande.
+      </p>
+      <select class="form-select form-select-lg mb-3 mt-5" aria-label="Ejemplo de .form-select-lg">
+          <option selected>Selecciona una talla</option>
+          <option value="1">Pequeño</option>
+          <option value="2">Mediano</option>
+          <option value="3">Grande</option>
+        </select>
+
+        <div class="d-flex">
+          <div class="mt-4 me-lg-5 me-sm-3" >
+              <h5 class="textbluecolor m-0">Precio</h5>
+              <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <span class="input-group-text">{{precioTotal | currency}}</span>
+                </div>
+            </div>
+            <div class="mt-4 ms-auto">
+              <h5 class="textbluecolor">Cantidad</h5>
+              <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1" (click)="removerProducto()">-</span>
+                  <input type="text" class="form-control text-center" placeholder="0" [value]="cantidadProducto" aria-label="Nombre de usuario" aria-describedby="basic-addon1">
+                  <span class="input-group-text" id="basic-addon1" (click)="agregarProducto()">+</span>
+                </div>
+        </div>
+        </div>
+
+        <div class="d-grid gap-2 col-12 mt-4">
+          <button class="btn btnagregar btn-primary" type="button">Agregar</button>
+        </div>
+
+  </div>
+</section>
+</div>
+
+
+
+
+<div class="container w-75 cartas mt-5">
+  <div class="mt-3">
+      <h1 class="Titles">Productos relacionados</h1>
+  </div>
+  <div class="row d-flex justify-content-center align-items-center">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+          <div class="col-lg-4  col-sm-12 ">
+              <div class="card h-100">
+                  <img src="assets/img/producto 1 perros.png" class="card-img-top w-50 rounded mx-auto d-block"
+                      alt="...">
+                  <div class="card-body">
+                      <h6 class="card-title fs text-center">Bufanda para perros</h6>
+                      <p class="precio text-center">$ 75.000</p>
+
+                      <div class="input-group mb-3 px-5">
+                          <span class="input-group-text">-</span>
+                          <input type="text" class="form-control text-center " placeholder="0"
+                              aria-label="Amount (to the nearest dollar)">
+                          <span class="input-group-text">+</span>
+                      </div>
+                      <button type="button"
+                          class="btn text-white fw-bold w-50 boton1 d-flex justify-content-center align-items-center">Agregar</button>
+                  </div>
+
+              </div>
+          </div>
+          <div class="col-lg-4  col-sm-12 ">
+              <div class="card h-100">
+                  <img src="assets/img/producto 2 perros.png" class="card-img-top w-50 rounded mx-auto d-block"
+                      alt="..."><br>
+                  <div class="card-body">
+                      <h6 class="card-title text-center">Pañoleta para perro</h6>
+                      <p class="precio text-center">$ 60.000</p>
+                      <div class="input-group mb-3 px-5">
+                          <span class="input-group-text">-</span>
+                          <input type="text" class="form-control text-center" placeholder="0"
+                              aria-label="Amount (to the nearest dollar)">
+                          <span class="input-group-text">+</span>
+                      </div>
+                      <button type="button"
+                          class="btn text-white fw-bold w-50 boton1 d-flex justify-content-center align-items-center">Agregar</button>
+                  </div>
+
+              </div>
+          </div>
+          <div class="col-lg-4  col-sm-12 ">
+              <div class="card h-100">
+                  <img src="assets/img/Producto perros 3.png" class="card-img-top w-50 rounded mx-auto d-block"
+                      alt="..."><br>
+                  <div class="card-body">
+                      <h6 class="card-title text-center">Chaqueta para perro doble faz</h6>
+                      <p class="precio text-center">$ 130.000</p>
+                      <div class="input-group mb-3 px-5">
+                          <span class="input-group-text">-</span>
+                          <input type="text" class="form-control text-center" placeholder="0"
+                              aria-label="Amount (to the nearest dollar)">
+                          <span class="input-group-text">+</span>
+                      </div>
+                      <button type="button"
+                          class="btn text-white fw-bold w-50 boton1 d-flex justify-content-center align-items-center">Agregar</button>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

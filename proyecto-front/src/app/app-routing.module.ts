@@ -7,6 +7,7 @@ import { GestionUsuariosComponent } from './components/admi/gestion-usuarios/ges
 import { ListaContactosComponent } from './components/admi/lista-contactos/lista-contactos.component';
 import { ListaProductosComponent } from './components/admi/lista-productos/lista-productos.component';
 import { ListaUsuariosComponent } from './components/admi/lista-usuarios/lista-usuarios.component';
+import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
 import { GatosComponent } from './components/gatos/gatos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PerrosComponent } from './components/perros/perros.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:"listausuarios",component:ListaUsuariosComponent},
   {path:"gestionusuarios",component:GestionUsuariosComponent},
   {path:"editarusuario/:id",component:GestionUsuariosComponent},
+  {path:"DetallesProducto", component:DetalleProductoComponent},
 
 
 
