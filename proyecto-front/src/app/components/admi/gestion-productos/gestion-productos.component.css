@@ -156,3 +156,7 @@ align-items: center;
   background-color: #1B3B6F;
   color: #fafafa;
 }
+.panel{
+  color: #1B3B6F;
+  width: 200px;
+}

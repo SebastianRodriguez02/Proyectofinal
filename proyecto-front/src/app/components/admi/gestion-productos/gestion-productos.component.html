@@ -1,18 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <section class="container">
   <div class="row">
     <div class="col-12 text-center pt-5  ">
       <div class="Pets">
+
+
         <h3 class="fw-bold"> {{tituloComponente}} producto</h3>
 
       </div>
     </div>
   </div>
 </section>
+<section class="container">
+  <div class="d-flex justify-content-between  mb-3">
+    <a class=" panel ps-5 ms-5" routerLink="/administrador"><i class="fa-solid fa-house"></i></a>
+  </div>
+</section>
 
 
 <section class="container mb-5">
   <h1 class="my-5 text-center"></h1>
-  <div class="mb-4"><a routerLink="/listaproductos" class="texto text-decoration-none mb-3">Lista de productos</a></div>
+  <div class="mb-4"><a routerLink="/listaproductos" class="texto text-decoration-none mb-3">Lista de productos</a>
+  </div>
 
   <form [formGroup]="productoForm" (ngSubmit)="enviarInformacion()">
     <div class="form-floating mb-3 ">
