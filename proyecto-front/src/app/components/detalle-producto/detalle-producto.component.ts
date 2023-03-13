@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { gestionProducto } from 'src/app/models/modelgestionproducto';
 import { ProductosService } from 'src/app/service/productos.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-detalle-producto',
@@ -36,6 +37,14 @@ if(this.cantidadProducto>1){
   this.cantidadProducto--
   this.precioTotal= this.precioProductoUnd * this.cantidadProducto
 }
+}
+comprar() {
+  Swal.fire ({
+    title: 'Exito!',
+    text: 'Tu compra se ha realizado correctamente',
+    icon: 'success',
+    confirmButtonText: 'Vale'
+  })
 }
 
 
