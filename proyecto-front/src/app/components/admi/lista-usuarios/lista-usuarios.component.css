@@ -164,8 +164,18 @@ table {
 td {
   text-align: center;
   vertical-align: middle;
+  text-overflow: ellipsis;
+  text-overflow: clip;
+  overflow: auto;
+
+
+
+
 }
 .panel{
   color: #1B3B6F;
   width: 200px;
+}
+.botfooter{
+  margin-bottom: 150px;
 }
